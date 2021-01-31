@@ -13,7 +13,9 @@
 (require 'init-key-bindings)
 
 ;; use treemacs
-(use-package treemacs)
+(use-package treemacs
+  :config
+  (treemacs-follow-mode 1))
 
 (use-package treemacs-evil
   :after treemacs evil)
