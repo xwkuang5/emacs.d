@@ -4,6 +4,7 @@
 
 (require 'init-config-variables)
 (require 'spacemacs-utils)
+(require 'lotsohuggin-utils)
 
 ;;----------------------------------------------------------------------------
 ;; The following show how spacemacs uses bind-map to bind a leader key to a
@@ -74,12 +75,13 @@
 
 (defun lotsohuggin/init-buffer-key-bindings()
   (lotsohuggin-leader-def
-   :states leader-binding-states
-   "bb" 'helm-mini
-   "bn" 'next-buffer
-   "bp" 'previous-buffer
-   "bd" 'spacemacs/kill-this-buffer
-   "bk" 'kill-buffer))
+    :states leader-binding-states
+    "bb" 'helm-mini
+    "bn" 'next-buffer
+    "bp" 'previous-buffer
+    "bd" 'spacemacs/kill-this-buffer
+    "bc" 'lotsohuggin/new-empty-frame
+    "bk" 'kill-buffer))
 
 (defun lotsohuggin/init-window-key-bindings()
   "window key bindings")
